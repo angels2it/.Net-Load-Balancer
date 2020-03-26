@@ -61,7 +61,7 @@ namespace NetLoadBalancer.Code.Middleware
 
             loggerFactory.AddNLog();
             app.AddNLogWeb();
-            env.ConfigureNLog(".\\conf\\nlog.config");
+            env.ConfigureNLog("./conf/nlog.config");
             return app;
             
         }

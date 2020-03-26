@@ -1,7 +1,7 @@
 ﻿{
-  "balancer": 
+  "balancer_sample": 
     {
-      "Host": "balancer.local",
+      "Host": "crm-api.zensen.vn",
       "Port": 80,
       "Scheme": "http",
       "Filters": [ "Cache", "Balancer", "Proxy" ],
@@ -9,13 +9,13 @@
         "Balancer": {
           "Nodes": [
             {
-              "Host": "localhost",
-              "Port": 5051,
+              "Host": "14.277.7.179",
+              "Port": 9090,
               "Scheme": "http"
             },
             {
-              "Host": "localhost",
-              "Port": 5052,
+              "Host": "14.277.7.179",
+              "Port": 9091,
               "Scheme": "http"
             }
           ],

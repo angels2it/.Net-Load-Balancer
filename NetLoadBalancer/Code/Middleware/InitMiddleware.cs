@@ -54,6 +54,7 @@ namespace NetLoadBalancer.Code.Middleware
         {
             host = context.Request.Host.Value;
             if (string.IsNullOrEmpty(host)) throw new Exception("HOST is empty. Please check configuration.");
+            var data = BalancerSettings.Current;
             vhost = BalancerSettings.Current.GetSettings<VHostOptions>(host);
             if (vhost == null || string.IsNullOrEmpty(vhost.Host)) throw new Exception($"VHOST is missing for {host}. Please check configuration.");
 
